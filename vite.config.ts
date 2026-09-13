@@ -8,6 +8,8 @@ export default defineConfig({
     rolldownOptions: {
       input: {
         home: 'index.html',
+        blog: 'blog/index.html',
+        motorsport: 'motorsport/index.html',
         curriculumVitae: 'curriculum-vitae/index.html',
       },
     },

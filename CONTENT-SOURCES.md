@@ -49,3 +49,9 @@ The curriculum vitae also links to [MATLAB Expo 2013 – CREO Project](https://w
 - [TrackApp README](https://github.com/rich-sykes/track-app) describes importing Harry’s LapTimer backup files into a web app with enhanced analytics. The public `xml_parser.py` contains exploratory Python parsing of lap records, sector information and telemetry. The site presents “the open-source Strava for motorsport” as the user’s product vision and explicitly describes the existing code as an early prototype. It does not claim a deployed app, adoption, working uploads or Strava affiliation.
 - The unnamed systematic risk modelling project is described using the user’s supplied scope: a three-layer data system consisting of **Data, Models and Decisions**. No internal project name, employer, technology stack, deployment state, numerical outcome or public repository is asserted.
 - Existing professional delivery case studies are retained in an expandable section. The former `#work` anchor continues to resolve; navigation now uses `#projects`.
+
+## Motorsport and blog
+
+The blog archive and `/motorsport/` section were added at the user’s request. The E46 M3 is a personal hobby project. Its current specification is based solely on the user’s supplied list, with obvious spelling corrections and consistent manufacturer casing. The page makes no claims about race history, results, power, lap times or performance.
+
+The published specification contains 12 items across chassis and suspension, driveline and engine, cooling and induction, and braking. “Engine/gearbox mound”, “oil coller” and “carbon inbox” were interpreted as engine and gearbox mounts, oil cooler and carbon airbox. The supplied names Creative and Millway are retained without inferring a particular product model.

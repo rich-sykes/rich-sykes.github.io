@@ -5,17 +5,17 @@ export function Arrow() {
 }
 
 export function Header({
-  curriculumVitae = false,
+  page = 'home',
 }: {
-  curriculumVitae?: boolean;
+  page?: 'home' | 'blog' | 'motorsport' | 'curriculum-vitae';
 }) {
-  const home = curriculumVitae ? '/' : '';
+  const home = page === 'home' ? '' : '/';
   return (
     <header className="site-header wrap">
       <a
         className="brand"
         href={`${home}#top`}
-        aria-label={`${profile.name}, ${curriculumVitae ? 'home' : 'back to top'}`}
+        aria-label={`${profile.name}, ${page === 'home' ? 'back to top' : 'home'}`}
       >
         <span className="monogram">
           rs<span>.</span>
@@ -25,10 +25,13 @@ export function Header({
       <nav aria-label="Main navigation">
         <a href={`${home}#systems`}>systems &amp; stack</a>
         <a href={`${home}#projects`}>projects</a>
+        <a href="/blog/" aria-current={page === 'blog' ? 'page' : undefined}>
+          blog
+        </a>
         <a href={`${home}#approach`}>approach</a>
         <a
           href={profile.cv}
-          aria-current={curriculumVitae ? 'page' : undefined}
+          aria-current={page === 'curriculum-vitae' ? 'page' : undefined}
         >
           curriculum vitae
         </a>
@@ -40,21 +43,17 @@ export function Header({
   );
 }
 
-export function Footer({
-  curriculumVitae = false,
-}: {
-  curriculumVitae?: boolean;
-}) {
+export function Footer({ compact = false }: { compact?: boolean }) {
   return (
     <footer
       id="contact"
-      className={`contact${curriculumVitae ? ' compact-footer' : ''}`}
+      className={`contact${compact ? ' compact-footer' : ''}`}
     >
       <div className="wrap">
-        {!curriculumVitae && (
+        {!compact && (
           <div className="contact-main">
             <div>
-              <p className="eyebrow">05 / Connect</p>
+              <p className="eyebrow">06 / Connect</p>
               <h2>
                 Complex problem?
                 <br />

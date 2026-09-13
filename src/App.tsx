@@ -1,3 +1,4 @@
+import { blogEntries } from './blog-content';
 import { Arrow, Footer, Header } from './components/SiteChrome';
 import {
   background,
@@ -250,7 +251,7 @@ function Approach() {
       <div className="wrap">
         <div className="section-heading">
           <div>
-            <p className="eyebrow">03 / Engineering approach</p>
+            <p className="eyebrow">04 / Engineering approach</p>
             <h2 id="approach-heading">
               Boring in production.
               <br />
@@ -283,6 +284,48 @@ function Approach() {
   );
 }
 
+function BlogPreview() {
+  const [entry] = blogEntries;
+  if (!entry) return null;
+
+  return (
+    <section
+      id="blog"
+      className="blog-preview light-section section-pad"
+      aria-labelledby="blog-heading"
+    >
+      <div className="wrap">
+        <div className="section-heading">
+          <div>
+            <p className="eyebrow">03 / Blog</p>
+            <h2 id="blog-heading">
+              Notes from
+              <br />
+              the workshop.
+            </h2>
+          </div>
+          <p>
+            Motorsport, engineering and the systems behind both. Starting with
+            the E46 M3 race car.
+          </p>
+        </div>
+        <a className="blog-feature" href={entry.href}>
+          <span className="blog-number">01</span>
+          <span className="blog-row-copy">
+            <span className="eyebrow">{entry.category}</span>
+            <strong>{entry.title}</strong>
+            <span>{entry.summary}</span>
+          </span>
+          <Arrow />
+        </a>
+        <a className="text-link" href="/blog/">
+          View all posts <span aria-hidden="true">→</span>
+        </a>
+      </div>
+    </section>
+  );
+}
+
 function Background() {
   return (
     <section
@@ -292,7 +335,7 @@ function Background() {
     >
       <div className="wrap background-grid">
         <div className="background-intro">
-          <p className="eyebrow">04 / Background</p>
+          <p className="eyebrow">05 / Background</p>
           <h2 id="background-heading">
             {background.introduction.split('\n').map((line) => (
               <span className="title-line" key={line}>
@@ -333,6 +376,7 @@ export default function App() {
         <Hero />
         <Systems />
         <Projects />
+        <BlogPreview />
         <Approach />
         <Background />
       </main>

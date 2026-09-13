@@ -8,7 +8,7 @@ export default function CurriculumVitae() {
       <a className="skip-link" href="#main">
         Skip to content
       </a>
-      <Header curriculumVitae />
+      <Header page="curriculum-vitae" />
       <main id="main" tabIndex={-1}>
         <section className="cv-hero wrap" aria-labelledby="cv-title">
           <p className="eyebrow">Curriculum vitae</p>
@@ -134,7 +134,7 @@ export default function CurriculumVitae() {
           </div>
         </div>
       </main>
-      <Footer curriculumVitae />
+      <Footer compact />
     </div>
   );
 }
