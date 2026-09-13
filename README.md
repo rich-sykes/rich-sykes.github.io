@@ -1,0 +1,48 @@
+# Richard Sykes — professional website
+
+A single-page React and TypeScript website, built with Vite and Bun. Published at **https://rich-sykes.github.io/** from [rich-sykes/rich-sykes.github.io](https://github.com/rich-sykes/rich-sykes.github.io). GitHub Pages serves only the static files in `dist/`; no Node or Bun server runs in production.
+
+## Run locally
+
+Use **Node.js 24.21.0 LTS** (`.nvmrc` / `.node-version`) and **Bun 1.4.2** (`.bun-version` / `packageManager`). Node is required by the Vite toolchain; Bun manages dependencies and project commands. CI reads the same version files.
+
+If using nvm, run `nvm install` and `nvm use`. Install the pinned Bun version with the [official Bun installer](https://bun.com/docs/installation):
+
+```sh
+curl -fsSL https://bun.com/install | bash -s 'bun-v1.4.2'
+bun --version
+node --version
+bun install --frozen-lockfile
+bun run dev
+```
+
+Open the local URL printed by Vite. Commands:
+
+| Command | Purpose |
+| --- | --- |
+| `bun run dev` | Development server with live updates |
+| `bun run typecheck` | Strict TypeScript check, no emitted files |
+| `bun run lint` | Biome lint, accessibility rules and formatting check |
+| `bun run format` | Format source files |
+| `bun run build` | Explicit TypeScript check followed by Vite production build |
+| `bun run preview` | Serve the built `dist/` locally for review |
+
+## Update content
+
+Edit **`src/content.ts`** for the introduction, links, metrics, both case studies, engineering principles and background. `src/App.tsx` contains the section headings and semantic presentation components; `src/styles.css` contains design tokens and responsive styles. Update `index.html` if changing the page title, description or canonical URL.
+
+See **`CONTENT-SOURCES.md`** for the evidence behind professional claims and the archived CV link. Do not change 2–3 → 8 runs/day to “8×”. Replace `profile.cv` with a new public CV URL when available and update the archive note in `Background` in `src/App.tsx`.
+
+Run lint and build before committing, then push to `main`. The workflow checks, builds and publishes automatically. Pull requests run the same checks without deployment. Commit `bun.lock` whenever dependencies change; keep Bun as the only package manager.
+
+## GitHub Pages
+
+In repository **Settings → Pages → Build and deployment**, the source must be **GitHub Actions**. The workflow uses GitHub's official configure, artifact upload and deployment actions. Its build job has read-only repository access; only the deployment job has Pages and OIDC write permissions. The deployment environment is `github-pages`.
+
+Vite's base path is `/` for the account root domain. All sections use anchors, so direct section links and refreshes work without a client-side router or a 404 workaround. No custom domain or Sites hosting is configured. The separate GitHub profile repository is a reference only.
+
+## Verification
+
+For a release, run `bun install --frozen-lockfile`, `bun run lint`, `bun run build`, then `bun run preview`. Check desktop and mobile layouts, 200% enlargement, visible keyboard focus, the skip link, navigation anchors, external links, favicon loading and browser console errors. Repeat a smoke check on the live Pages URL after the deployment succeeds.
+
+No analytics, cookies, external fonts, third-party embeds or contact form are included. Contact is through LinkedIn. Browser loading requires JavaScript; the HTML includes a profile-link fallback when it is disabled.

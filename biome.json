@@ -1,0 +1,15 @@
+{
+  "$schema": "https://biomejs.dev/schemas/2.5.13/schema.json",
+  "vcs": { "enabled": true, "clientKind": "git", "useIgnoreFile": true },
+  "files": { "includes": ["**", "!!bun.lock", "!!instructions-prompt.md"] },
+  "formatter": { "indentStyle": "space", "indentWidth": 2 },
+  "javascript": { "formatter": { "quoteStyle": "single" } },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "preset": "recommended",
+      "style": { "noDescendingSpecificity": "off" }
+    }
+  },
+  "assist": { "actions": { "source": { "organizeImports": "on" } } }
+}
