@@ -130,6 +130,12 @@ export const curriculumVitae = {
       date: 'October 2014',
     },
     {
+      title: 'MATLAB Expo 2013 – CREO Project',
+      venue: 'MathWorks presentation (PDF)',
+      date: 'October 2013',
+      url: 'https://www.mathworks.com/content/dam/mathworks/mathworks-dot-com/solutions/automotive/files/uk-expo-2013/the-creo-project-ford.pdf',
+    },
+    {
       title:
         'Prospects of Transient Calibration for Forthcoming Legislated Drive Cycles',
       venue:

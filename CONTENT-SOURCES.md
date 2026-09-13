@@ -44,6 +44,8 @@ The user supplied these personal verification links. All three Microsoft records
 
 ## Projects
 
+The curriculum vitae also links to [MATLAB Expo 2013 – CREO Project](https://www.mathworks.com/content/dam/mathworks/mathworks-dot-com/solutions/automotive/files/uk-expo-2013/the-creo-project-ford.pdf). The user supplied this link; the presentation names Richard Sykes on its title slide and is dated October 2013.
+
 - [TrackApp README](https://github.com/rich-sykes/track-app) describes importing Harry’s LapTimer backup files into a web app with enhanced analytics. The public `xml_parser.py` contains exploratory Python parsing of lap records, sector information and telemetry. The site presents “the open-source Strava for motorsport” as the user’s product vision and explicitly describes the existing code as an early prototype. It does not claim a deployed app, adoption, working uploads or Strava affiliation.
 - The unnamed systematic risk modelling project is described using the user’s supplied scope: a three-layer data system consisting of **Data, Models and Decisions**. No internal project name, employer, technology stack, deployment state, numerical outcome or public repository is asserted.
 - Existing professional delivery case studies are retained in an expandable section. The former `#work` anchor continues to resolve; navigation now uses `#projects`.

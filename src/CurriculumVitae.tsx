@@ -115,7 +115,15 @@ export default function CurriculumVitae() {
                 <h2 id="publications-heading">Publications</h2>
                 {curriculumVitae.publications.map((item) => (
                   <article className="cv-publication" key={item.title}>
-                    <h3>{item.title}</h3>
+                    <h3>
+                      {item.url ? (
+                        <a href={item.url}>
+                          {item.title} <Arrow />
+                        </a>
+                      ) : (
+                        item.title
+                      )}
+                    </h3>
                     <p>
                       {item.venue} · {item.date}
                     </p>
