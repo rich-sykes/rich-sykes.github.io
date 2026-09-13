@@ -1,27 +1,57 @@
 // Professional copy lives here. See CONTENT-SOURCES.md before changing claims.
 export const profile = {
-  name: 'Richard Sykes',
+  name: 'Rich Sykes',
   role: 'Quantitative developer & platform engineer',
   introduction:
-    'I build the engineering around the model: trusted platforms, usable tools and repeatable execution. Bringing quantitative teams closer to the decisions their work supports.',
+    'I build Python and Azure platforms for complex quantitative work in highly regulated environments. Clear interfaces, efficient execution and model controls that keep decisions traceable.',
   github: 'https://github.com/rich-sykes',
   linkedin: 'https://uk.linkedin.com/in/richsykes',
-  cv: 'https://github.com/rich-sykes/rich-sykes/blob/9671a0a5a82c03c9a166afaa621404b9e5161f13/curriculum-vitae/rich-sykes-cv.md',
+  cv: '/curriculum-vitae/',
 };
 
 export const highlights = [
-  { value: '2–3 → 8', label: 'Critical model tests per day' },
-  { value: '15+', label: 'Modeller teams using SDK patterns' },
-  { value: '100+', label: 'Concurrent self-service users' },
+  { value: 'Python', label: 'Clear APIs & usable SDKs' },
+  { value: 'Azure', label: 'Cloud-native model platforms' },
+  { value: 'Governance', label: 'Traceable, reviewable decisions' },
 ];
+
+export const capabilities = [
+  {
+    title: 'Python interfaces',
+    description:
+      'Turn quantitative models into services people can use. Layer thin API clients beneath domain-specific SDKs, with typed contracts, input validation and consistent package governance.',
+    tools: 'FastAPI · Pydantic · SQLAlchemy · pytest',
+  },
+  {
+    title: 'Azure platforms',
+    description:
+      'Build the infrastructure around model execution, monitoring and scenario testing. Combine cloud-native services with data lineage, audit evidence and controlled release paths.',
+    tools:
+      'Container Apps · Functions · Azure SQL · Cosmos DB · Azure Machine Learning · Application Insights',
+  },
+  {
+    title: 'Quantitative systems',
+    description:
+      'Connect data pipelines, simulation and numerical optimisation to real decisions. Keep data, assumptions and model outputs separate so the decision logic remains visible.',
+    tools: 'Python · SQL · NumPy · pandas · Monte Carlo · PD/LGD calibration',
+  },
+];
+
+export const delivery = {
+  title: 'Built to be operated, tested and reviewed.',
+  description:
+    'Azure DevOps pipelines, Docker, behaviour-focused tests, coverage gates and vulnerability scanning support repeatable delivery. Observability and model lifecycle controls make execution and change inspectable.',
+  source: 'https://github.com/rich-sykes/rich-sykes#systems',
+};
 
 export const caseStudies = [
   {
     id: 'model-testing',
     number: '01',
     category: 'Model execution & impact assessment',
-    title: 'More model tests.\nLess waiting.',
-    summary: 'Removing the bottlenecks around critical model testing.',
+    title: 'Efficient execution.\nMore room for model assessment.',
+    summary:
+      'Model execution infrastructure that supports the pace of quantitative work.',
     problem:
       'Infrastructure and workflow bottlenecks limited critical model testing to 2–3 runs per day, constraining impact assessment for capital planning.',
     contribution:

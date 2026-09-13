@@ -225,7 +225,7 @@
     padding-left: 32px;
     border-left: 1px solid var(--dark-line);
     flex: 1 1 0;
-    min-width: min-content;
+    min-width: min(100%, 11rem);
   }
   .highlights > div:first-child {
     padding-left: 0;
@@ -248,6 +248,207 @@
   .light-section {
     background: var(--paper);
     color: var(--ink);
+  }
+  .systems {
+    padding-bottom: 64px;
+  }
+  .systems + .work {
+    padding-top: 32px;
+  }
+  .capabilities {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+    gap: 36px;
+  }
+  .capabilities article {
+    border-top: 1px solid var(--line);
+    padding-top: 28px;
+  }
+  .capabilities h3 {
+    font-size: 1.7rem;
+    margin-bottom: 20px;
+  }
+  .capabilities p {
+    color: var(--muted);
+  }
+  .capabilities .capability-tools {
+    color: #0e716f;
+    margin-top: 24px;
+    font-size: 0.875rem;
+  }
+  .delivery-detail {
+    border-block: 1px solid var(--line);
+    margin-top: 40px;
+    padding-block: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .delivery-detail > div {
+    flex: 1 1 30rem;
+    max-width: 750px;
+  }
+  .delivery-detail h3 {
+    font-size: 1.35rem;
+    margin-bottom: 12px;
+  }
+  .delivery-detail p {
+    color: var(--muted);
+  }
+  .delivery-detail > a {
+    color: #0e716f;
+    font-size: 0.875rem;
+  }
+  .systems .text-link {
+    margin-top: 24px;
+    font-size: 0.875rem;
+  }
+  .outcome-heading {
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: -0.03em;
+    margin-block: 0 24px;
+  }
+  nav [aria-current="page"] {
+    color: var(--teal);
+    text-decoration: underline;
+  }
+  .cv-hero {
+    padding-block: 64px 56px;
+  }
+  .cv-hero .eyebrow {
+    color: var(--teal);
+    margin-bottom: 24px;
+  }
+  .cv-role {
+    font-size: 1.3rem;
+    margin-block: 20px;
+  }
+  .cv-hero .intro {
+    max-width: 840px;
+  }
+  .cv-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin-top: 28px;
+  }
+  .cv-links a {
+    color: var(--teal);
+  }
+  .cv-body {
+    padding-block: 64px 80px;
+  }
+  .cv-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 3fr);
+    gap: 64px;
+  }
+  .cv-index nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .cv-index nav a {
+    color: var(--muted);
+    font-size: 0.9375rem;
+    padding-block: 8px;
+  }
+  .cv-index nav a:hover {
+    color: #0e716f;
+    text-decoration: underline;
+  }
+  .cv-content > section {
+    margin-bottom: 56px;
+  }
+  .cv-content > section:last-child {
+    margin-bottom: 0;
+  }
+  .cv-content h2 {
+    font-size: 2.3rem;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--line);
+    margin-bottom: 32px;
+  }
+  .cv-content h3 {
+    font-size: 1.55rem;
+    line-height: 1.3;
+  }
+  .cv-job {
+    margin-bottom: 36px;
+  }
+  .cv-job .eyebrow,
+  .cv-education .eyebrow {
+    color: #0e716f;
+    margin-bottom: 12px;
+  }
+  .cv-job-role {
+    font-weight: 600;
+    margin-block: 8px 16px;
+  }
+  .cv-job > p:last-of-type,
+  .cv-content li,
+  .cv-skills dd,
+  .cv-education > p:last-child,
+  .cv-publication p {
+    color: var(--muted);
+  }
+  .cv-content ul {
+    padding-left: 24px;
+  }
+  .cv-content li + li {
+    margin-top: 10px;
+  }
+  .cv-skills {
+    display: grid;
+    gap: 24px;
+  }
+  .cv-skills dt {
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  .cv-content .certifications {
+    list-style: none;
+    padding: 0;
+  }
+  .certifications li {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 24px;
+  }
+  .cv-content .certifications li + li {
+    padding-top: 16px;
+  }
+  .certifications h3 {
+    font-size: 1.2rem;
+    color: var(--ink);
+    margin-top: 8px;
+  }
+  .certifications .eyebrow,
+  .certifications a {
+    color: #0e716f;
+  }
+  .certifications a {
+    font-size: 0.875rem;
+  }
+  .cv-education,
+  .cv-publication {
+    margin-bottom: 28px;
+  }
+  .cv-education > p:last-child,
+  .cv-publication p {
+    margin-top: 10px;
+  }
+  .compact-footer {
+    padding-top: 0;
   }
   .section-heading {
     display: grid;
@@ -626,6 +827,17 @@
 
 @layer responsive {
   @media (max-width: 900px) {
+    .cv-layout {
+      grid-template-columns: 1fr;
+      gap: 36px;
+    }
+    .cv-index nav {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 8px 24px;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 24px;
+    }
     .wrap {
       width: calc(100% - 64px);
     }
@@ -689,6 +901,11 @@
     nav a {
       font-size: 0.8125rem;
     }
+    .site-header > nav {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0 16px;
+    }
     .nav-contact {
       display: none;
     }
@@ -715,21 +932,47 @@
     }
     .highlights {
       padding: 26px 0 34px;
-      gap: 14px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
     }
     .highlights > div {
-      padding-left: 14px;
+      padding-left: 0;
+      min-width: 0;
+      border-left: 0;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 16px;
     }
     .highlights dd {
-      font-size: 1.6rem;
-      white-space: nowrap;
+      font-size: 1.3rem;
+      flex: 0 0 42%;
+      margin-bottom: 0;
     }
     .highlights dt {
-      font-size: 0.75rem;
+      font-size: 0.875rem;
       line-height: 1.5;
+      max-width: none;
+      flex: 1;
     }
     .section-pad {
       padding-block: 56px;
+    }
+    .cv-hero {
+      padding-block: 44px;
+    }
+    .cv-role {
+      font-size: 1.125rem;
+    }
+    .cv-body {
+      padding-block: 32px 56px;
+    }
+    .cv-content h2 {
+      font-size: 1.9rem;
+    }
+    .cv-content > section {
+      margin-bottom: 44px;
     }
     .section-heading,
     .approach .section-heading {

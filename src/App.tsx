@@ -1,46 +1,24 @@
+import { Arrow, Footer, Header } from './components/SiteChrome';
 import {
   background,
+  capabilities,
   caseStudies,
+  delivery,
   highlights,
   principles,
   profile,
 } from './content';
-
-function Arrow() {
-  return <span aria-hidden="true">↗</span>;
-}
-
-function Header() {
-  return (
-    <header className="site-header wrap">
-      <a className="brand" href="#top" aria-label="Richard Sykes, back to top">
-        <span className="monogram">
-          rs<span>.</span>
-        </span>
-        <span>{profile.name}</span>
-      </a>
-      <nav aria-label="Main navigation">
-        <a href="#work">Selected work</a>
-        <a href="#approach">Approach</a>
-        <a href="#background">Background</a>
-        <a className="nav-contact" href="#contact">
-          Let’s connect <Arrow />
-        </a>
-      </nav>
-    </header>
-  );
-}
 
 function Hero() {
   return (
     <section className="hero wrap" aria-labelledby="hero-heading">
       <p className="eyebrow">{profile.role}</p>
       <h1 id="hero-heading">
-        Complex models.
+        Efficient model
         <br />
-        Clear interfaces.
+        execution platforms.
         <br />
-        <span>Decisions you can inspect.</span>
+        <span>Auditable by design.</span>
       </h1>
       <div className="hero-bottom">
         <p className="intro">{profile.introduction}</p>
@@ -60,6 +38,54 @@ function Hero() {
   );
 }
 
+function Systems() {
+  return (
+    <section
+      id="systems"
+      className="systems light-section section-pad"
+      aria-labelledby="systems-heading"
+    >
+      <div className="wrap">
+        <div className="section-heading">
+          <div>
+            <p className="eyebrow">01 / Systems &amp; stack</p>
+            <h2 id="systems-heading">
+              Python at the interface.
+              <br />
+              Azure underneath.
+            </h2>
+          </div>
+          <p>
+            From model logic to production services: the tools, abstractions and
+            controls that let quantitative teams work independently.
+          </p>
+        </div>
+        <div className="capabilities">
+          {capabilities.map((item) => (
+            <article key={item.title}>
+              <h3>{item.title}</h3>
+              <p>{item.description}</p>
+              <p className="capability-tools">{item.tools}</p>
+            </article>
+          ))}
+        </div>
+        <div className="delivery-detail">
+          <div>
+            <h3>{delivery.title}</h3>
+            <p>{delivery.description}</p>
+          </div>
+          <a href={delivery.source}>
+            Systems &amp; stack on GitHub <Arrow />
+          </a>
+        </div>
+        <a className="text-link" href={`${profile.cv}#certifications`}>
+          Azure certifications <span aria-hidden="true">→</span>
+        </a>
+      </div>
+    </section>
+  );
+}
+
 function Work() {
   return (
     <section
@@ -70,7 +96,7 @@ function Work() {
       <div className="wrap">
         <div className="section-heading">
           <div>
-            <p className="eyebrow">01 / Selected work</p>
+            <p className="eyebrow">02 / Selected work</p>
             <h2 id="work-heading">
               Engineering that
               <br />
@@ -126,31 +152,11 @@ function Work() {
                 >
                   <p className="eyebrow">The outcome</p>
                   {index === 0 ? (
-                    <>
-                      <p className="outcome-number">
-                        8<span>runs / day</span>
-                      </p>
-                      <p className="outcome-caption">
-                        Up from 2–3 critical model tests per day.
-                      </p>
-                      <figure className="throughput">
-                        <figcaption>Critical model tests per day</figcaption>
-                        <div className="chart-row">
-                          <span>Before</span>
-                          <div className="bar-track">
-                            <div className="bar before" />
-                          </div>
-                          <strong>2–3</strong>
-                        </div>
-                        <div className="chart-row">
-                          <span>After</span>
-                          <div className="bar-track">
-                            <div className="bar after" />
-                          </div>
-                          <strong>8</strong>
-                        </div>
-                      </figure>
-                    </>
+                    <h4 className="outcome-heading">
+                      Less waiting.
+                      <br />
+                      More assessment.
+                    </h4>
                   ) : (
                     <div className="platform-stats">
                       <div>
@@ -194,7 +200,7 @@ function Approach() {
       <div className="wrap">
         <div className="section-heading">
           <div>
-            <p className="eyebrow">02 / Engineering approach</p>
+            <p className="eyebrow">03 / Engineering approach</p>
             <h2 id="approach-heading">
               Boring in production.
               <br />
@@ -236,7 +242,7 @@ function Background() {
     >
       <div className="wrap background-grid">
         <div className="background-intro">
-          <p className="eyebrow">03 / Background</p>
+          <p className="eyebrow">04 / Background</p>
           <h2 id="background-heading">
             {background.introduction.split('\n').map((line) => (
               <span className="title-line" key={line}>
@@ -248,9 +254,8 @@ function Background() {
             <p key={paragraph}>{paragraph}</p>
           ))}
           <a className="text-link" href={profile.cv}>
-            Read my public CV <Arrow />
+            Curriculum vitae <span aria-hidden="true">→</span>
           </a>
-          <span className="cv-note">Archived public version · April 2026</span>
         </div>
         <ol className="experience">
           {background.roles.map((role) => (
@@ -267,52 +272,6 @@ function Background() {
   );
 }
 
-function Contact() {
-  return (
-    <footer id="contact" className="contact">
-      <div className="wrap">
-        <div className="contact-main">
-          <div>
-            <p className="eyebrow">04 / Connect</p>
-            <h2>
-              Complex problem?
-              <br />
-              <span>Let’s talk it through.</span>
-            </h2>
-            <p>
-              For conversations about quantitative platforms,
-              <br className="desktop-break" /> engineering and working together.
-            </p>
-          </div>
-          <div className="contact-links">
-            <a href={profile.linkedin}>
-              Connect on LinkedIn <Arrow />
-            </a>
-            <a href={profile.github}>
-              Explore my GitHub <Arrow />
-            </a>
-            <a href={profile.cv}>
-              Read my public CV <Arrow />
-            </a>
-          </div>
-        </div>
-        <div className="footer-bottom">
-          <a className="brand" href="#top">
-            <span className="monogram">
-              rs<span>.</span>
-            </span>
-            <span>{profile.name}</span>
-          </a>
-          <p>Complex models. Clear interfaces.</p>
-          <a href="#top">
-            Back to top <span aria-hidden="true">↑</span>
-          </a>
-        </div>
-      </div>
-    </footer>
-  );
-}
-
 export default function App() {
   return (
     <div id="top">
@@ -322,11 +281,12 @@ export default function App() {
       <Header />
       <main id="main" tabIndex={-1}>
         <Hero />
+        <Systems />
         <Work />
         <Approach />
         <Background />
       </main>
-      <Contact />
+      <Footer />
     </div>
   );
 }

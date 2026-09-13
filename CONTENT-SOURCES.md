@@ -1,6 +1,6 @@
 # Content provenance
 
-Reviewed 13 September 2026. Professional statements are based on Richard's public materials, not independently audited. Source priority: the latest profile README over the older CV where they differ. No profile repository files were changed.
+Reviewed 13 September 2026. Professional statements are based on Rich's public materials, not independently audited. Source priority: the latest profile README over the older CV where they differ. No profile repository files were changed.
 
 ## Sources
 
@@ -9,7 +9,7 @@ Reviewed 13 September 2026. Professional statements are based on Richard's publi
 - [Archived public CV, April 2026](https://github.com/rich-sykes/rich-sykes/blob/9671a0a5a82c03c9a166afaa621404b9e5161f13/curriculum-vitae/rich-sykes-cv.md).
 - [Profile identity artwork](https://github.com/rich-sykes/rich-sykes/blob/main/assets/profile-header-dark.svg), reference for navy and teal. The website uses its own typography and layout.
 
-The CV URL linked by the README on `main` returns 404. The current profile repository contains only the README and its artwork. The site links to the last public CV in repository history and labels it as archived, rather than claiming it is current or restoring files to the profile repository.
+The CV URL linked by the README on `main` returns 404. The current profile repository contains only the README and its artwork. The website now has its own curriculum vitae page, adapted from that archived source and the latest README, with the user’s supplied Microsoft credential links. No files were restored to the profile repository.
 
 ## Claims and limits
 
@@ -26,4 +26,18 @@ The CV URL linked by the README on `main` returns 404. The current profile repos
 | No audit findings | Current README's narrow wording: owned implementation and control evidence scope in Big Four reviews. No blanket organisation-wide claim. |
 | Automotive background; 70% recurring workload automation; 50M+ daily observations; methodology adopted as Ford standard | Current README Background / delivery evidence, with employer attribution from the archived CV |
 
-The site omits the older CV's broad audit claims, 8× headline, 60% onboarding figure, portfolio valuations, certifications, future plans and private contact details. It does not imply that proprietary employer code is available on GitHub.
+The site omits the older CV's broad audit claims, 8× headline, 60% onboarding figure, portfolio valuations, uncompleted certifications, future plans and private contact details. It does not imply that proprietary employer code is available on GitHub.
+
+## Curriculum vitae and positioning update
+
+At the user’s request, branding is **Rich Sykes** throughout the website. The primary message is efficient, auditable model execution platforms; throughput figures remain in detailed delivery evidence. The new Systems & stack section draws from the current README’s Systems, Stack and implementation-detail sections.
+
+Role dates, education, leadership development and publication details on the curriculum vitae page come from the archived public CV. Publications and the university attendance dates also appear on the public LinkedIn profile. These additions do not repeat the archive’s broader audit or portfolio-value claims. Completed Azure fundamentals certifications are included; no in-progress or planned qualification is presented as earned.
+
+## Microsoft credentials
+
+The user supplied these personal verification links. All three Microsoft records were opened and showed active credentials. Their names and earned dates take precedence over the older CV, which had incorrect 2025 dates for AZ-900 and AI-900. Referral query parameters were removed from the site links.
+
+- [Azure Fundamentals](https://learn.microsoft.com/en-gb/users/richardsykes-5576/credentials/69ccfc080401ab6a): earned 4 February 2026.
+- [Azure AI Fundamentals](https://learn.microsoft.com/en-gb/users/richardsykes-5576/credentials/b0324e5eaba12742): earned 18 February 2026.
+- [Azure Data Fundamentals](https://learn.microsoft.com/en-us/users/richardsykes-5576/credentials/487155a29bb91877): earned 15 April 2026.
