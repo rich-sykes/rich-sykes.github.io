@@ -44,6 +44,46 @@ export const delivery = {
   source: 'https://github.com/rich-sykes/rich-sykes#systems',
 };
 
+export type Project = {
+  id: string;
+  name: string;
+  category: string;
+  headline: string;
+  description: string;
+  detail?: string;
+  layers?: string[];
+  technologies: string;
+  link?: { href: string; label: string };
+};
+
+export const projects: Project[] = [
+  {
+    id: 'track-app',
+    name: 'TrackApp',
+    category: 'Open source · Motorsport analytics',
+    headline: 'The open-source Strava for motorsport.',
+    description:
+      'The idea: turn Harry’s LapTimer backup files into a web app for richer motorsport analysis. Bring lap, sector and telemetry data together to understand what happened on track.',
+    detail:
+      'The public repository contains an early Python data-parsing prototype: extracting lap records, sector information and time-series telemetry from LapTimer XML exports.',
+    technologies: 'Python · XML · Time-series data',
+    link: {
+      href: 'https://github.com/rich-sykes/track-app',
+      label: 'Explore TrackApp on GitHub',
+    },
+  },
+  {
+    id: 'systematic-risk-data',
+    name: 'Systematic risk modelling',
+    category: 'Data architecture',
+    headline: 'Data. Models. Decisions.',
+    description:
+      'A three-layer data system for systematic risk modelling: Data, Models and Decisions. A structure that connects the information going into a model with the decisions it supports.',
+    layers: ['Data', 'Models', 'Decisions'],
+    technologies: 'Data systems · Systematic risk modelling',
+  },
+];
+
 export const caseStudies = [
   {
     id: 'model-testing',

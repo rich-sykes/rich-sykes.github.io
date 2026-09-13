@@ -7,6 +7,7 @@ import {
   highlights,
   principles,
   profile,
+  projects,
 } from './content';
 
 function Hero() {
@@ -22,8 +23,8 @@ function Hero() {
       </h1>
       <div className="hero-bottom">
         <p className="intro">{profile.introduction}</p>
-        <a className="button primary" href="#work">
-          Explore my work <span aria-hidden="true">↓</span>
+        <a className="button primary" href="#projects">
+          Explore my projects <span aria-hidden="true">↓</span>
         </a>
       </div>
       <dl className="highlights">
@@ -86,105 +87,154 @@ function Systems() {
   );
 }
 
-function Work() {
+function Projects() {
   return (
     <section
-      id="work"
+      id="projects"
       className="work light-section section-pad"
-      aria-labelledby="work-heading"
+      aria-labelledby="projects-heading"
     >
       <div className="wrap">
+        <span id="work" className="anchor-alias" aria-hidden="true" />
         <div className="section-heading">
           <div>
-            <p className="eyebrow">02 / Selected work</p>
-            <h2 id="work-heading">
-              Engineering that
+            <p className="eyebrow">02 / Projects</p>
+            <h2 id="projects-heading">
+              From track data
               <br />
-              moves work forward.
+              to systematic risk.
             </h2>
           </div>
           <p>
-            Two examples from credit risk platform delivery at Investec. The
-            systems around the models, and the difference they make.
+            Projects connecting my interests in motorsport, data systems and
+            quantitative engineering.
           </p>
         </div>
-        <div className="case-studies">
-          {caseStudies.map((study, index) => (
+        <div className="project-grid">
+          {projects.map((project) => (
             <article
-              key={study.id}
-              id={study.id}
-              className="case-study"
-              aria-labelledby={`${study.id}-title`}
+              key={project.id}
+              id={project.id}
+              className="project-card"
+              aria-labelledby={`${project.id}-title`}
             >
-              <div className="case-meta">
-                <span className="case-number">{study.number}</span>
-                <p className="eyebrow">{study.category}</p>
-                <span className="case-company">Investec</span>
-              </div>
-              <div className="case-grid">
-                <div className="case-copy">
-                  <h3 id={`${study.id}-title`}>
-                    {study.title.split('\n').map((line) => (
-                      <span className="title-line" key={line}>
-                        {line}
-                      </span>
-                    ))}
-                  </h3>
-                  <p className="case-summary">{study.summary}</p>
-                  <dl className="case-detail">
-                    <div>
-                      <dt>The problem</dt>
-                      <dd>{study.problem}</dd>
-                    </div>
-                    <div>
-                      <dt>My contribution</dt>
-                      <dd>{study.contribution}</dd>
-                    </div>
-                    <div>
-                      <dt>The approach</dt>
-                      <dd>{study.approach}</dd>
-                    </div>
-                  </dl>
-                </div>
-                <aside
-                  className="case-outcome"
-                  aria-label={`${study.category}: outcome`}
-                >
-                  <p className="eyebrow">The outcome</p>
-                  {index === 0 ? (
-                    <h4 className="outcome-heading">
-                      Less waiting.
-                      <br />
-                      More assessment.
-                    </h4>
-                  ) : (
-                    <div className="platform-stats">
-                      <div>
-                        <p className="outcome-number">
-                          15+<span>modeller teams</span>
-                        </p>
-                        <p>Using hierarchical Python SDK patterns.</p>
-                      </div>
-                      <div>
-                        <p className="outcome-number">
-                          100+<span>concurrent users</span>
-                        </p>
-                        <p>Supported by self-service model interrogation.</p>
-                      </div>
-                    </div>
-                  )}
-                  <p className="outcome-description">{study.outcome}</p>
-                </aside>
-              </div>
-              <div className="case-footer">
-                <p>{study.technologies}</p>
-                <a href={`${profile.github}#background`}>
-                  Public delivery evidence <Arrow />
-                </a>
+              <p className="eyebrow">{project.category}</p>
+              <h3 id={`${project.id}-title`}>{project.name}</h3>
+              <p className="project-headline">{project.headline}</p>
+              <p className="project-description">{project.description}</p>
+              {project.detail && (
+                <p className="project-detail">{project.detail}</p>
+              )}
+              {project.layers && (
+                <ol className="project-layers" aria-label="System layers">
+                  {project.layers.map((layer, index) => (
+                    <li key={layer}>
+                      <span className="eyebrow">0{index + 1}</span>
+                      <span>{layer}</span>
+                    </li>
+                  ))}
+                </ol>
+              )}
+              <div className="project-footer">
+                <p>{project.technologies}</p>
+                {project.link && (
+                  <a href={project.link.href}>
+                    {project.link.label} <Arrow />
+                  </a>
+                )}
               </div>
             </article>
           ))}
         </div>
+        <details className="professional-details">
+          <summary>
+            <span>Professional delivery</span>
+            <span className="details-caption">
+              Model execution, Python SDKs &amp; self-service tools
+            </span>
+          </summary>
+          <p className="professional-intro">
+            Two examples from credit risk platform delivery at Investec, with
+            the problems, engineering decisions and delivery outcomes in detail.
+          </p>
+          <div className="case-studies">
+            {caseStudies.map((study, index) => (
+              <article
+                key={study.id}
+                id={study.id}
+                className="case-study"
+                aria-labelledby={`${study.id}-title`}
+              >
+                <div className="case-meta">
+                  <span className="case-number">{study.number}</span>
+                  <p className="eyebrow">{study.category}</p>
+                  <span className="case-company">Investec</span>
+                </div>
+                <div className="case-grid">
+                  <div className="case-copy">
+                    <h3 id={`${study.id}-title`}>
+                      {study.title.split('\n').map((line) => (
+                        <span className="title-line" key={line}>
+                          {line}
+                        </span>
+                      ))}
+                    </h3>
+                    <p className="case-summary">{study.summary}</p>
+                    <dl className="case-detail">
+                      <div>
+                        <dt>The problem</dt>
+                        <dd>{study.problem}</dd>
+                      </div>
+                      <div>
+                        <dt>My contribution</dt>
+                        <dd>{study.contribution}</dd>
+                      </div>
+                      <div>
+                        <dt>The approach</dt>
+                        <dd>{study.approach}</dd>
+                      </div>
+                    </dl>
+                  </div>
+                  <aside
+                    className="case-outcome"
+                    aria-label={`${study.category}: outcome`}
+                  >
+                    <p className="eyebrow">The outcome</p>
+                    {index === 0 ? (
+                      <h4 className="outcome-heading">
+                        Less waiting.
+                        <br />
+                        More assessment.
+                      </h4>
+                    ) : (
+                      <div className="platform-stats">
+                        <div>
+                          <p className="outcome-number">
+                            15+<span>modeller teams</span>
+                          </p>
+                          <p>Using hierarchical Python SDK patterns.</p>
+                        </div>
+                        <div>
+                          <p className="outcome-number">
+                            100+<span>concurrent users</span>
+                          </p>
+                          <p>Supported by self-service model interrogation.</p>
+                        </div>
+                      </div>
+                    )}
+                    <p className="outcome-description">{study.outcome}</p>
+                  </aside>
+                </div>
+                <div className="case-footer">
+                  <p>{study.technologies}</p>
+                  <a href={`${profile.github}#background`}>
+                    Public delivery evidence <Arrow />
+                  </a>
+                </div>
+              </article>
+            ))}
+          </div>
+        </details>
       </div>
     </section>
   );
@@ -282,7 +332,7 @@ export default function App() {
       <main id="main" tabIndex={-1}>
         <Hero />
         <Systems />
-        <Work />
+        <Projects />
         <Approach />
         <Background />
       </main>

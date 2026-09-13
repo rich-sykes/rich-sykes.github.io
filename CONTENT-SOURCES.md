@@ -41,3 +41,9 @@ The user supplied these personal verification links. All three Microsoft records
 - [Azure Fundamentals](https://learn.microsoft.com/en-gb/users/richardsykes-5576/credentials/69ccfc080401ab6a): earned 4 February 2026.
 - [Azure AI Fundamentals](https://learn.microsoft.com/en-gb/users/richardsykes-5576/credentials/b0324e5eaba12742): earned 18 February 2026.
 - [Azure Data Fundamentals](https://learn.microsoft.com/en-us/users/richardsykes-5576/credentials/487155a29bb91877): earned 15 April 2026.
+
+## Projects
+
+- [TrackApp README](https://github.com/rich-sykes/track-app) describes importing Harry’s LapTimer backup files into a web app with enhanced analytics. The public `xml_parser.py` contains exploratory Python parsing of lap records, sector information and telemetry. The site presents “the open-source Strava for motorsport” as the user’s product vision and explicitly describes the existing code as an early prototype. It does not claim a deployed app, adoption, working uploads or Strava affiliation.
+- The unnamed systematic risk modelling project is described using the user’s supplied scope: a three-layer data system consisting of **Data, Models and Decisions**. No internal project name, employer, technology stack, deployment state, numerical outcome or public repository is asserted.
+- Existing professional delivery case studies are retained in an expandable section. The former `#work` anchor continues to resolve; navigation now uses `#projects`.

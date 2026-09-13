@@ -472,6 +472,104 @@
     display: grid;
     gap: 32px;
   }
+  .anchor-alias {
+    display: block;
+    scroll-margin-top: 2rem;
+  }
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 23rem), 1fr));
+    gap: 32px;
+  }
+  .project-card {
+    background: #fff;
+    border: 1px solid var(--line);
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+  }
+  .project-card > .eyebrow {
+    color: #0e716f;
+    margin-bottom: 24px;
+    font-size: 0.75rem;
+  }
+  .project-card h3 {
+    font-size: 2rem;
+    margin-bottom: 16px;
+  }
+  .project-headline {
+    font-size: 1.125rem;
+    color: #0e716f;
+    margin-bottom: 20px;
+  }
+  .project-description,
+  .project-detail {
+    color: var(--muted);
+    margin-bottom: 20px;
+  }
+  .project-detail {
+    font-size: 0.9375rem;
+  }
+  .project-layers {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 8px 0 28px;
+    padding: 0;
+  }
+  .project-layers li {
+    flex: 1 1 6rem;
+    background: #edf4f3;
+    border-top: 2px solid #0e716f;
+    padding: 16px;
+  }
+  .project-layers li > span {
+    display: block;
+  }
+  .project-layers .eyebrow {
+    color: #0e716f;
+    margin-bottom: 8px;
+    font-size: 0.75rem;
+  }
+  .project-footer {
+    margin-top: auto;
+    padding-top: 24px;
+    border-top: 1px solid var(--line);
+  }
+  .project-footer p {
+    color: var(--muted);
+    font-size: 0.8125rem;
+  }
+  .project-footer a {
+    display: inline-block;
+    margin-top: 16px;
+    font-size: 0.9375rem;
+    color: #0e716f;
+  }
+  .professional-details {
+    margin-top: 40px;
+    border-top: 1px solid var(--line);
+  }
+  .professional-details > summary {
+    padding-block: 24px;
+    cursor: pointer;
+    font-size: 1.125rem;
+  }
+  .professional-details > summary::marker {
+    color: #0e716f;
+  }
+  .details-caption {
+    display: block;
+    margin: 8px 0 0 20px;
+    color: var(--muted);
+    font-size: 0.875rem;
+  }
+  .professional-intro {
+    color: var(--muted);
+    margin-bottom: 28px;
+    max-width: 720px;
+  }
   .case-study {
     background: #fff;
     border: 1px solid var(--line);
@@ -989,6 +1087,9 @@
     }
     .case-study {
       padding: 24px 20px 0;
+    }
+    .project-card {
+      padding: 24px;
     }
     .case-meta {
       align-items: flex-start;

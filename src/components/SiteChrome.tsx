@@ -23,14 +23,14 @@ export function Header({
         <span>{profile.name}</span>
       </a>
       <nav aria-label="Main navigation">
-        <a href={`${home}#systems`}>Systems &amp; stack</a>
-        <a href={`${home}#work`}>Selected work</a>
-        <a href={`${home}#approach`}>Approach</a>
+        <a href={`${home}#systems`}>systems &amp; stack</a>
+        <a href={`${home}#projects`}>projects</a>
+        <a href={`${home}#approach`}>approach</a>
         <a
           href={profile.cv}
           aria-current={curriculumVitae ? 'page' : undefined}
         >
-          Curriculum vitae
+          curriculum vitae
         </a>
         <a className="nav-contact" href={`${home}#contact`}>
           Let’s connect <Arrow />

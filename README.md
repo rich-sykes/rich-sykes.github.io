@@ -29,9 +29,9 @@ Open the local URL printed by Vite. Commands:
 
 ## Update content
 
-Edit **`src/content.ts`** for the homepage introduction, links, capability summaries, case studies, engineering principles and background. Edit **`src/cv-content.ts`** for curriculum vitae experience, expertise, education and certifications, including personal Microsoft Learn verification URLs. Presentation lives in `src/App.tsx`, `src/CurriculumVitae.tsx` and the shared `src/components/SiteChrome.tsx`. `src/styles.css` contains the design tokens and responsive styles. Update `index.html` and `curriculum-vitae/index.html` when changing page titles, descriptions or canonical URLs.
+Edit **`src/content.ts`** for the homepage introduction, links, capability summaries, projects, case studies, engineering principles and background. Edit **`src/cv-content.ts`** for curriculum vitae experience, expertise, education and certifications, including personal Microsoft Learn verification URLs. Presentation lives in `src/App.tsx`, `src/CurriculumVitae.tsx` and the shared `src/components/SiteChrome.tsx`. `src/styles.css` contains the design tokens and responsive styles. Update `index.html` and `curriculum-vitae/index.html` when changing page titles, descriptions or canonical URLs.
 
-See **`CONTENT-SOURCES.md`** for the evidence behind professional claims. The site presents its own curriculum vitae at `/curriculum-vitae/`. Keep throughput figures in the case-study and experience detail; do not change 2–3 → 8 runs/day to “8×”.
+See **`CONTENT-SOURCES.md`** for the evidence behind professional claims. The site presents its own curriculum vitae at `/curriculum-vitae/`. Projects lead the homepage’s project section; the earlier case studies remain inside the Professional delivery disclosure. Keep throughput figures in the case-study and experience detail; do not change 2–3 → 8 runs/day to “8×”.
 
 Run lint and build before committing, then push to `main`. The workflow checks, builds and publishes automatically. Pull requests run the same checks without deployment. Commit `bun.lock` whenever dependencies change; keep Bun as the only package manager.
 

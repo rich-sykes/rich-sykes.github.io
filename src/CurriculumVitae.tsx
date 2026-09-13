@@ -25,8 +25,8 @@ export default function CurriculumVitae() {
             <a href={profile.github}>
               GitHub <Arrow />
             </a>
-            <a href="/#work">
-              Selected work <span aria-hidden="true">→</span>
+            <a href="/#projects">
+              Projects <span aria-hidden="true">→</span>
             </a>
           </div>
         </section>
